@@ -1,0 +1,26 @@
+class Solution {
+    public int majorityElement(int[] nums) {
+        int cnt = 0,ele = nums[0];
+
+        for(int i=0;i<nums.length;i++){
+            if(cnt==0){
+                ele = nums[i];
+                cnt++;
+            }else if(nums[i]==ele){
+                cnt++;
+            }else{
+                cnt--;
+            }
+        }
+
+        // to verify majority element is present or not in the array
+        cnt = 0;
+        for(int val : nums){
+           if(ele == val){
+            cnt++;
+           }
+        }
+
+        return (cnt>(nums.length/2))?ele:-1;
+    }
+}
