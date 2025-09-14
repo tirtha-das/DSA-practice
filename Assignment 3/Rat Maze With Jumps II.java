@@ -57,3 +57,8 @@ class Solution{
 		return sol;
     }
 }
+
+
+int solve(vector<int>&nums){
+	
+}
